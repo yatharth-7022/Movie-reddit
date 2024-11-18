@@ -1,4 +1,5 @@
-function WatchedMovie({ movie }) {
+function WatchedMovie({ movie, onDeleteWatched }) {
+  // movie.Runtime = Number(movie.Runtime.split(" ").at(0));
   return (
     <li key={movie.imdbID}>
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
@@ -6,7 +7,7 @@ function WatchedMovie({ movie }) {
       <div>
         <p>
           <span>⭐️</span>
-          <span>{movie.imdbRating}</span>
+          <span>{Number(movie.imdbRating)}</span>
         </p>
         <p>
           <span>🌟</span>
@@ -14,8 +15,14 @@ function WatchedMovie({ movie }) {
         </p>
         <p>
           <span>⏳</span>
-          <span>{movie.runtime} min</span>
+          <span>{Number(movie.Runtime.split(" ").at(0))} min</span>
         </p>
+        <button
+          className="btn-delete"
+          onClick={() => onDeleteWatched(movie.imdbID)}
+        >
+          ---
+        </button>
       </div>
     </li>
   );
