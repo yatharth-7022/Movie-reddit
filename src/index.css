@@ -31,11 +31,13 @@ body {
 /* ******* */
 
 .nav-bar {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 7.2rem;
-  padding: 0 3.2rem;
+  padding: 0rem 1rem;
   background-color: var(--color-primary);
   border-radius: 0.9rem;
 }
@@ -43,7 +45,9 @@ body {
   font-family: "Poppins";
   font-weight: 400;
 }
-
+.nav-bar h1 {
+  font-family: "Original Surfer";
+}
 .main {
   margin-top: 2.4rem;
   height: calc(100vh - 7.2rem - 3 * 2.4rem);

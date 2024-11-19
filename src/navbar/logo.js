@@ -3,14 +3,14 @@ function Logo() {
     <div>
       <div className="logo">
         <img
-          style={{ height: "8rem", width: "20rem" }}
-          src="../yo.png"
+          style={{ height: "7rem", width: "7rem" }}
+          src="../logo.png"
           alt=""
         />
         <h1
-          style={{ fontWeight: 900, fontSize: "3rem", letterSpacing: "0.5rem" }}
+          style={{ fontWeight: 700, fontSize: "3rem", letterSpacing: "0.1rem" }}
         >
-          Zilla
+          Movie Zilla
         </h1>
       </div>
     </div>

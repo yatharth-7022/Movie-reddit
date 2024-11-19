@@ -27,6 +27,9 @@ function SelectedMovieView({
   useEffect(() => {
     if (!movie.Title) return;
     document.title = `Movie | ${movie.Title}`;
+    return function () {
+      document.title = "Movie Zilla";
+    };
   }, [movie.Title]);
   useEffect(() => {
     const movieData = async () => {
